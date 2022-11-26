@@ -6,7 +6,7 @@
 /*   By: aahlyel <aahlyel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:39:46 by aahlyel           #+#    #+#             */
-/*   Updated: 2022/11/26 18:00:36 by aahlyel          ###   ########.fr       */
+/*   Updated: 2022/11/26 23:47:53 by aahlyel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,11 @@ char	*ft_strfreejoin(char *s1, char *s2)
 
 	count = -1;
 	if (!s1)
+	{
 		s1 = ft_strdup("");
+		if (!s1)
+			return (NULL);
+	}
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	str = malloc((s1_len + s2_len + 1) * sizeof(char));
